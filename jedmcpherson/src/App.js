@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import LinkList from './components/link-list/link-list.component';
+import LinkList from './components/linktree-clone/link-list/link-list.component';
 import './App.css';
 
 class App extends Component{
