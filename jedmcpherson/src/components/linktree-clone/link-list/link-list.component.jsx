@@ -4,9 +4,10 @@ class LinkList extends Component{
 
     render(){
         const { links } = this.props
+ 
     
         return (
-            <div>
+            <div className={this.props.className}>
                 {links.map(link =>(
                     <div className="link" key={link.id}>
                         <a
