@@ -1,38 +1,178 @@
-.App {
+@import url("https://use.typekit.net/lsa2gwg.css");
+:root .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+:root .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+:root body * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+:root body > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #e25b82;
+}
+:root body a {
+  all: unset;
+}
+:root body #linktree {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #DFAD59;
+  background-color: #CB5275;
+}
+:root body #linktree .linktree-titles {
+  color: #291a40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 20vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root body #linktree .linktree-titles h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root body #linktree .linktree-titles h3 {
+  font-size: 1rem;
+  color: #DFAD59;
+  font-family: "forma-djr-deck", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 600;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+:root body #linktree .linktree-img-container {
+  height: 28vh;
+  position: relative;
+}
+:root body #linktree .linktree-img-container .linktree-img {
+  background-color: #291a40;
+  height: 20vh;
+}
+:root body #linktree .linktree-img-container .profile-pic {
+  position: absolute;
+  left: 2vh;
+  bottom: 0vh;
+  height: 14vh;
+  width: 13vh;
+  background-color: #fff;
+  border: #CB5275 solid 0.5rem;
+  border-radius: 50%;
+  z-index: 4;
+}
+:root body #linktree .linktree-img-container .subheading {
+  position: absolute;
+  left: 13vh;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+  border: #291a40 solid 1px;
+  border-radius: 0 0 0.5rem;
+  background-color: #291a40;
+}
+:root body #linktree .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 38vh;
+  width: 100vw;
 }
-
-.App-link {
-  color: #61dafb;
+:root body #linktree .btn-container .link {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  background-color: #291a40;
+  margin: 2vh 2.5% 0 2.5%;
+  height: 6vh;
+  overflow: scroll;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform ease-in-out 0.1s, -webkit-box-shadow ease-in-out;
+  transition: -webkit-transform ease-in-out 0.1s, -webkit-box-shadow ease-in-out;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out;
+  transition: transform ease-in-out 0.1s, box-shadow ease-in-out, -webkit-transform ease-in-out 0.1s, -webkit-box-shadow ease-in-out;
+  -webkit-box-shadow: 3px 4px #fff;
+          box-shadow: 3px 4px #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root body #linktree .btn-container .link a {
+  font-size: 1.2rem;
+}
+:root body #linktree .btn-container .link:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+:root body #linktree .footer {
+  width: 100vw;
+  height: 14vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+:root body #linktree .footer .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10vh;
+  width: 10vh;
+  background-color: #291a40;
+  border-radius: 50%;
 }
