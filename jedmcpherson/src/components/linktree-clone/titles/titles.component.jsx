@@ -7,10 +7,12 @@ class LinkTreeTitles extends Component{
         // console.log( test)
      
         return (
-            <div>
+            <div className="linktree-titles">
+                <div>
                 <h1>{titles.title}</h1>
-                <h2>{titles.subtitle}</h2>
                 <h3>{titles.subheading}</h3>
+                </div>
+                <h2>{titles.subtitle}</h2>
             </div>
         );
     }
