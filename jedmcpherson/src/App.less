@@ -13,18 +13,22 @@
     sans-serif;
 
 
-    @maxWidth: 600px;
+    @maxWidth: 100vw;
+    @maxWidthMobile: 500px;
+
 
 
 
     .row {
         display: flex;
         flex-flow: row nowrap;
+        justify-content: center;
     }
 
     .col {
         display: flex;
         flex-flow: column nowrap;
+        justify-content: center;
     }
 
     body {
@@ -40,8 +44,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: @landingPagePrimary / .9;
-
+            background-color: @landingPagePrimary;
 
         }
 
@@ -65,6 +68,10 @@
 
             background-color: @landingPagePrimary;
 
+            @media (min-width: 500px) {
+                width: @maxWidthMobile;
+            }
+
 
 
 
@@ -79,6 +86,10 @@
                 justify-content: center;
                 text-align: center;
 
+                @media (min-width: 500px) {
+                    width: @maxWidthMobile;
+                }
+
                 h1 {
                     font-size: 2.5rem;
                     font-weight: 900;
@@ -86,7 +97,7 @@
                 }
 
                 h3 {
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     color: @landingPageText;
                     font-family: @linktreeSecondaryFont;
                     letter-spacing: 3px;
@@ -94,22 +105,88 @@
                 }
             }
 
+            @keyframes linktreeImgs {
+                0% {
+                    background-position: top;
+                    background-image: url("./imgs/link-tree-img1.png");
+                    background-size: 112%;
+                }
+
+                10% {
+                    background-image: url("./imgs/link-tree-img1.png");
+                    background-position: top;
+                    background-size: 125%;
+                }
+
+                20% {
+                    background-image: url("./imgs/link-tree-img2.png");
+                    background-position: top;
+                    background-size: 125%;
+                }
+
+                40% {
+                    // background-size: 112%;
+                    background-position: bottom;
+                    background-image: url("./imgs/link-tree-img2.png");
+                }
+
+                60% {
+                    background-position: bottom left;
+                    background-size: 150%;
+                    background-image: url("./imgs/link-tree-img3.png");
+
+                }
+
+                70% {
+                    background-position: bottom right;
+                    background-size: 150%;
+                    background-image: url("./imgs/link-tree-img4.png");
+
+                }
+
+                90% {
+                    background-position: bottom;
+                    background-size: 125%;
+                    background-image: url("./imgs/link-tree-img5.png");
+
+                }
+            }
+
+
             .linktree-img-container {
                 height: 28vh;
                 position: relative;
 
                 .linktree-img {
-                    background-color: @landingPageText;
+                    // background-color: @landingPageText;
+                    background-repeat: no-repeat;
                     height: 20vh;
+                    background-position: bottom;
+                    background-size: 125%;
+                    background-image: url("./imgs/link-tree-img5.png");
+                    border-top: #291a40 solid 3px;
+                    border-bottom: #291a40 solid 3px;
+                    animation: linktreeImgs 20s infinite;
+                    // animation-direction: reverse;
+                    // animation-fill-mode: forwards;
                 }
+
+                @media (min-width: 500px) {
+                    border: #291a40 solid 5px;
+                }
+
+
 
                 .profile-pic {
                     position: absolute;
                     left: 2vh;
                     bottom: 0vh;
-                    height: 14vh;
-                    width: 13vh;
+                    height: 13.5vh;
+                    width: 13.5vh;
                     background-color: #fff;
+                    background-image: url(./imgs/headshot.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
                     border: @landingPagePrimary solid .4rem;
                     border-radius: 50%;
                     z-index: 4;
@@ -117,12 +194,13 @@
 
                 .subheading {
                     position: absolute;
-                    left: 13vh;
+                    left: 13.5vh;
                     font-size: .9rem;
-                    padding: .5rem 1.5rem;
+                    padding: .35rem 1.5rem;
                     border: @landingPageSecondary solid 1px;
-                    border-radius: 0 0 .5rem;
+                    border-radius: 0 .1rem .5rem;
                     background-color: @landingPageSecondary;
+
 
                 }
 
@@ -133,6 +211,11 @@
                 display: flex;
                 height: 40vh;
                 width: @maxWidth;
+
+                @media (min-width: 500px) {
+                    width: @maxWidthMobile;
+                }
+
 
                 .link {
                     text-align: center;
@@ -147,9 +230,8 @@
                     border-radius: .5rem;
                     cursor: pointer;
                     transform: scale(1);
-                    transition: transform ease-in-out .1s,
-                        box-shadow ease-in-out;
-                    box-shadow: 3px 4px @landingPageText;
+                    transition: transform ease-in-out .1s;
+                    box-shadow: 0px 6px @landingPageText;
 
 
                     a {
@@ -176,11 +258,12 @@
 
 
                 .link {
+
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    height: 10vh;
-                    width: 10vh;
+                    height: 7vh;
+                    width: 7vh;
                     background-color: @landingPageSecondary;
                     border-radius: 50%;
                     transition: transform ease-in-out .1s;
@@ -190,7 +273,7 @@
 
 
                     a {
-                        font-size: 1.2rem;
+                        font-size: 1.4rem;
 
                     }
 
@@ -210,30 +293,42 @@
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
 
 
     body {
 
         #linktree {
-            border: #291a40 3px solid;
-            border-radius: 15px;
+            // border: #291a40 3px solid;
+            // border-radius: 15px;
             transform: scale(.95);
-            width: 600px !important;
-            box-sizing: content-box;
+
+
+            // box-sizing: content-box;
+            .linktree-img-container {
+                // width: 600px;
+
+                .linktree-img {
+                    border-radius: 15px;
+                }
+            }
 
             .linktree-titles {
 
-                width: 600px;
+                // width: 600px;
             }
 
         }
 
         .btn-container {
 
-            width: 600px !important;
+            // width: 600px !important;
 
         }
+
+        // .footer {
+        //     width: 600px !important;
+        // }
     }
 
 }
