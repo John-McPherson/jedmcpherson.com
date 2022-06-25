@@ -100,7 +100,7 @@
   font-weight: 600;
 }
 @-webkit-keyframes linktreeImgs {
-  0% {
+  00% {
     background-position: top;
     background-image: url("./imgs/link-tree-img1.png");
     background-size: 112%;
@@ -117,26 +117,25 @@
   }
   40% {
     background-position: bottom;
-    background-image: url("./imgs/link-tree-img2.png");
   }
   60% {
     background-position: bottom left;
     background-size: 150%;
     background-image: url("./imgs/link-tree-img3.png");
   }
-  70% {
+  65% {
     background-position: bottom right;
     background-size: 150%;
     background-image: url("./imgs/link-tree-img4.png");
   }
   90% {
-    background-position: bottom;
+    background-position: bottom right;
     background-size: 125%;
     background-image: url("./imgs/link-tree-img5.png");
   }
 }
 @keyframes linktreeImgs {
-  0% {
+  00% {
     background-position: top;
     background-image: url("./imgs/link-tree-img1.png");
     background-size: 112%;
@@ -153,20 +152,19 @@
   }
   40% {
     background-position: bottom;
-    background-image: url("./imgs/link-tree-img2.png");
   }
   60% {
     background-position: bottom left;
     background-size: 150%;
     background-image: url("./imgs/link-tree-img3.png");
   }
-  70% {
+  65% {
     background-position: bottom right;
     background-size: 150%;
     background-image: url("./imgs/link-tree-img4.png");
   }
   90% {
-    background-position: bottom;
+    background-position: bottom right;
     background-size: 125%;
     background-image: url("./imgs/link-tree-img5.png");
   }
@@ -178,16 +176,16 @@
 :root body #linktree .linktree-img-container .linktree-img {
   background-repeat: no-repeat;
   height: 20vh;
-  background-position: bottom;
+  background-position: bottom right;
   background-size: 125%;
   background-image: url("./imgs/link-tree-img5.png");
   border-top: #291a40 solid 3px;
   border-bottom: #291a40 solid 3px;
-  -webkit-animation: linktreeImgs 20s infinite;
-          animation: linktreeImgs 20s infinite;
+  -webkit-animation: linktreeImgs 20s;
+          animation: linktreeImgs 20s;
 }
 @media (min-width: 500px) {
-  :root body #linktree .linktree-img-container {
+  :root body #linktree .linktree-img-container .linktree-img {
     border: #291a40 solid 5px;
   }
 }
@@ -241,7 +239,6 @@
   background-color: #291a40;
   margin: 1vh 4% 1vh 4%;
   height: 10vh;
-  overflow: scroll;
   border-radius: 0.5rem;
   cursor: pointer;
   -webkit-transform: scale(1);
@@ -254,7 +251,20 @@
           box-shadow: 0px 6px #DFAD59;
 }
 :root body #linktree .btn-container .link a {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.2rem;
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
 }
 :root body #linktree .btn-container .link:hover {
   -webkit-transform: scale(1.03);
@@ -294,6 +304,17 @@
 }
 :root body #linktree .footer .link a {
   font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 7vh;
+  width: 7vh;
 }
 :root body #linktree .footer .link:hover {
   -webkit-transform: scale(1.1);

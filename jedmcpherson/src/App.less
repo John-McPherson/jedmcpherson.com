@@ -106,7 +106,7 @@
             }
 
             @keyframes linktreeImgs {
-                0% {
+                00% {
                     background-position: top;
                     background-image: url("./imgs/link-tree-img1.png");
                     background-size: 112%;
@@ -127,7 +127,7 @@
                 40% {
                     // background-size: 112%;
                     background-position: bottom;
-                    background-image: url("./imgs/link-tree-img2.png");
+                    // background-image: url("./imgs/link-tree-img2.png");
                 }
 
                 60% {
@@ -137,7 +137,7 @@
 
                 }
 
-                70% {
+                65% {
                     background-position: bottom right;
                     background-size: 150%;
                     background-image: url("./imgs/link-tree-img4.png");
@@ -145,7 +145,7 @@
                 }
 
                 90% {
-                    background-position: bottom;
+                    background-position: bottom right;
                     background-size: 125%;
                     background-image: url("./imgs/link-tree-img5.png");
 
@@ -161,18 +161,19 @@
                     // background-color: @landingPageText;
                     background-repeat: no-repeat;
                     height: 20vh;
-                    background-position: bottom;
+                    background-position: bottom right;
                     background-size: 125%;
                     background-image: url("./imgs/link-tree-img5.png");
                     border-top: #291a40 solid 3px;
                     border-bottom: #291a40 solid 3px;
-                    animation: linktreeImgs 20s infinite;
+                    animation: linktreeImgs 20s;
+
                     // animation-direction: reverse;
                     // animation-fill-mode: forwards;
-                }
+                    @media (min-width: 500px) {
+                        border: #291a40 solid 5px;
+                    }
 
-                @media (min-width: 500px) {
-                    border: #291a40 solid 5px;
                 }
 
 
@@ -226,7 +227,7 @@
                     background-color: @landingPageSecondary;
                     margin: 1vh 4% 1vh 4%;
                     height: 10vh;
-                    overflow: scroll;
+                    // overflow: scroll;
                     border-radius: .5rem;
                     cursor: pointer;
                     transform: scale(1);
@@ -235,7 +236,14 @@
 
 
                     a {
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         font-size: 1.2rem;
+                        width: 100%;
+                        height: 100%;
+                        line-height: 100%;
 
                     }
 
@@ -274,7 +282,11 @@
 
                     a {
                         font-size: 1.4rem;
-
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 7vh;
+                        width: 7vh;
                     }
 
                 }
