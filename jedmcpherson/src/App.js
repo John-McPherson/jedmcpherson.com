@@ -3,12 +3,17 @@ import {Component} from 'react'
 import LinkTreeTitles from './components/linktree-clone/titles/titles.component';
 import LinkList from './components/linktree-clone/link-list/link-list.component';
 import LinkTreeImg from './components/linktree-clone/linktree-imgs/linktree-imgs.component';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
+import ReactGA, { initialize } from 'react-ga';
 
+// initializes google analytics
+const TRACKING_ID = 'G-VHHN6EJ3TE'
+ReactGA.initialize(TRACKING_ID);
 
+// for fontawesome icons
 const instagram = <FontAwesomeIcon icon={faInstagram} />
 const twitter = <FontAwesomeIcon icon={faTwitter} />
 const website = <FontAwesomeIcon icon={faLink} />
@@ -57,7 +62,8 @@ class App extends Component{
         },     
     
       ],
-      footerLinks:[     {
+      footerLinks:[     
+        {
           title: website,
           id:'asdfg',
           ariaLabel: 'links to jedmcpherson.com',
