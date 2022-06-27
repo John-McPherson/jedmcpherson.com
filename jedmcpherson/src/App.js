@@ -7,11 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
-import ReactGA, { initialize } from 'react-ga';
+import ReactGA from "react-ga4";
 
 // initializes google analytics
 const TRACKING_ID = 'G-VHHN6EJ3TE'
 ReactGA.initialize(TRACKING_ID);
+
+
 
 // for fontawesome icons
 const instagram = <FontAwesomeIcon icon={faInstagram} />
@@ -85,7 +87,10 @@ class App extends Component{
       ],
       };
     }
-    
+    // componentDidMount(){
+    //     ReactGA.pageview(window.location.pathname);
+    //     console.log('')
+    // }
   
   render(){
     
