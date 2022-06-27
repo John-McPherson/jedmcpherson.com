@@ -225,20 +225,10 @@
   }
 }
 :root body #linktree .btn-container .link {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 92%;
   background-color: #291a40;
   margin: 1vh 4% 1vh 4%;
-  height: 10vh;
+  height: 6vh;
   border-radius: 0.5rem;
   cursor: pointer;
   -webkit-transform: scale(1);
